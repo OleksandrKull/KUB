@@ -8,7 +8,7 @@
   			var sc = 0;
   			function kubikiRandom() 
   			{ 
-	    		if (i%3 != 1 && i%3 !=2)	
+	    		if (i%3 == 0)	
 	    		{
 	      		//Каждый раз мы генерируем новые координаты
 				$("#kubik-1").attr({x:Math.random()*95+"%", y:Math.random()*550});
@@ -54,18 +54,16 @@
 			function timer()
 			{
 			    var second = document.getElementById('second').innerHTML;
-			    var end = false;
+			    //var end = false;
 			     
 			    if( second > 0 )	
 			    {
 			    	 second--;
+			    	 document.getElementById('second').innerHTML = second;
+
 			    }	else 	
 			    {
-			    	end=true;
-			    }
-			    if(end)	
-			    {
-			        clearInterval(intervalID);
+			    	clearInterval(intervalID);
 			        var Name = prompt(" Score: "+sc+"\n\nYour Name:", '');
 			        //Запись в таблицу	http://qaru.site/questions/458/add-table-row-in-jquery
 			        $("#table").find('tbody')
@@ -82,8 +80,6 @@
 				            )
 				        );
 				    kol++;
-				    //sc = 0;
-				    //$(".Score").html(sc);
 				    $("#kubik-1").hide();
 			        $("#kubik-2").hide();
 			        $("#kubik-3").hide();
@@ -91,14 +87,9 @@
 			        	sc = 0;
 				    	$(".Score").html(sc);
 				    	i = 0;
-				    	clearInterval(intervalID);
-			        	document.getElementById('second').innerHTML = 10;
+			        	document.getElementById('second').innerHTML = 5;
 				    	play();
 		        	});
-			    } else
-			    {
-			        document.getElementById('second').innerHTML = second;
-			        
 			    }
 
 			    //функция restart
@@ -107,7 +98,7 @@
 			    	$(".Score").html(sc);
 			    	i = 0;
 			    	clearInterval(intervalID);
-		        	document.getElementById('second').innerHTML = 10;
+		        	document.getElementById('second').innerHTML = 5;
 			    	play();
 				});
 			}
