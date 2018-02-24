@@ -11,18 +11,15 @@
 	    		if (i%3 == 0)	
 	    		{
 	      		//Каждый раз мы генерируем новые координаты
-				$("#kubik-1").attr({x:Math.random()*95+"%", y:Math.random()*550});
-				$("#kubik-2").attr({x:Math.random()*95+"%", y:Math.random()*550});
-				$("#kubik-3").attr({x:Math.random()*95+"%", y:Math.random()*550});
+				$("#kubik-1").attr({x:Math.random()*95+"%", y:Math.random()*550, fill:"red"});
+				$("#kubik-2").attr({x:Math.random()*95+"%", y:Math.random()*550, fill:"green"});
+				$("#kubik-3").attr({x:Math.random()*95+"%", y:Math.random()*550, fill:"yellow"});
 	    		$("#kubik-1").show();
 	    		$("#kubik-2").show();
 	    		$("#kubik-3").show();
 	    		}
 	    	};
 	    	kubikiRandom();
-	  		$("#kubik-1").attr({fill:"red"});
-	  		$("#kubik-2").attr({fill:"green"});
-	  		$("#kubik-3").attr({fill:"yellow"});
 		  	// убивает кубики
 		    $("#kubik-1").on("click", function()
 		    {
@@ -54,8 +51,6 @@
 			function timer()
 			{
 			    var second = document.getElementById('second').innerHTML;
-			    //var end = false;
-			     
 			    if( second > 0 )	
 			    {
 			    	 second--;
@@ -83,22 +78,23 @@
 				    $("#kubik-1").hide();
 			        $("#kubik-2").hide();
 			        $("#kubik-3").hide();
-			        $("#Play").one("click", function play2()	{
+			        $("#Play").one("click", function()	{
+			        	clearInterval(intervalID);
 			        	sc = 0;
 				    	$(".Score").html(sc);
 				    	i = 0;
-			        	document.getElementById('second').innerHTML = 5;
+			        	document.getElementById('second').innerHTML = 60;
 				    	play();
 		        	});
 			    }
 
 			    //функция restart
-			    $("#Restart").on("click", function restart()	{
+			    $("#Restart").on("click", function()	{
 			    	sc = 0;
 			    	$(".Score").html(sc);
 			    	i = 0;
 			    	clearInterval(intervalID);
-		        	document.getElementById('second').innerHTML = 5;
+		        	document.getElementById('second').innerHTML = 60;
 			    	play();
 				});
 			}
