@@ -98,6 +98,7 @@
 			    	play();
 				});
 			}
+			//Вызывает функцию каждую секунду
 			window.intervalID = setInterval(timer, 1000);
 	    }); 	
 	});
