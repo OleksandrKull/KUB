@@ -2,7 +2,7 @@
 	 $(document).ready(function() 
 	 {
 	  	var kol = 1;
-	  	$("#Play").one("click", function play()
+	  	$("#play").one("click", function play()
 	  	{ 
 	  		var i = 0;
   			var sc = 0;
@@ -18,7 +18,7 @@
 	    		$("#kubik-2").show();
 	    		$("#kubik-3").show();
 	    		}
-	    	};
+	    	}
 	    	kubikiRandom();
 		  	// убивает кубики
 		    $("#kubik-1").on("click", function()
@@ -35,7 +35,7 @@
 	    	{
 			 	$("#kubik-2").hide();
 		      	sc++;
-		      	i++;;
+		      	i++;
 		    	$(".Score").html(sc);
 		    	kubikiRandom();
 	    	});
@@ -89,7 +89,7 @@
 			    }
 
 			    //функция restart
-			    $("#Restart").on("click", function()	{
+			    $("#restart").on("click", function()	{
 			    	sc = 0;
 			    	$(".Score").html(sc);
 			    	i = 0;

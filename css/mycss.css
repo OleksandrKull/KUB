@@ -3,11 +3,13 @@
 }
 
 body { 
-	background: #f8f8f8 }
+	background: #f8f8f8
+}
 
 .GameBoard {
 	background-color: lightgrey;
 }
+
 #timer{
 margin: 10px auto;
 text-align: center;
@@ -30,6 +32,10 @@ font-size: 30px;
 cursor: default;
 }
 
-#kubik-1	{
-	
+h1	{
+	text-align: center;
+}
+
+.center {
+    text-align: center;
 }
