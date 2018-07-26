@@ -6,8 +6,10 @@ body {
 	background: #f8f8f8
 }
 
-.GameBoard {
+#gameBoard {
 	background-color: lightgrey;
+	width: 100%;
+	height: 600px;
 }
 
 #timer{

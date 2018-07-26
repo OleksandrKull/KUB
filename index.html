@@ -10,7 +10,7 @@
     <!-- JQuery -->
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/bubble.js.js"></script>
+        <script type="text/javascript" src="js/bubble.js"></script>
     <!-- my style -->
     <link rel="stylesheet" href="css/bubble.css">
 
@@ -50,13 +50,9 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col">
+      <div class="col" id="gameBoard">
         <!-- Блок с игровым полем -->
-        <svg width="100%" height="600" class="GameBoard">
-          <rect id="kubik-1" rx="2" fill="lightgray" x="40%"" y="250" width="50" height="50" rx="2"/>
-          <rect id="kubik-2" width="50" height="50" x="60%" y="250" rx="2" fill="lightgray" />
-          <rect id="kubik-3" width="50" height="50" x="80%" y="250" rx="2" fill="lightgray"  />
-        </svg>
+        <img src='image/bubble.jpg' width="100" height="100">
       </div>
       <div class="col-4">
         <!-- Таблица результатов -->
